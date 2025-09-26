@@ -1,0 +1,14 @@
+{
+  "name": "Agent Wheel",
+  "description": "Agent Wheel is a Base Mini App built with Zara.",
+  "image": "https://dummyimage.com/1200x628/0a0b0d/ffffff.png&text=OG",
+  "external_url": "https://521dd612-afe0-4b35-a6fb-7f06e84e593a.vercel.app",
+  "properties": {
+    "app": {
+      "name": "Agent Wheel",
+      "description": "Agent Wheel is a Base Mini App built with Zara.",
+      "url": "https://521dd612-afe0-4b35-a6fb-7f06e84e593a.vercel.app",
+      "icon": "https://0co.to/images/zara-2.png"
+    }
+  }
+}
