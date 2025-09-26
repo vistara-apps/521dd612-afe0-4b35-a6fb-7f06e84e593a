@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Warm Social Theme - Dark teal background with coral accents */
+  --color-bg: #1a2e2e;
+  --color-fg: #f0f4f4;
+  --color-accent: #ff6b6b;
+  --color-primary: #4ecdc4;
+  --color-surface: #2a3f3f;
+  --color-text-primary: #f0f4f4;
+  --color-text-secondary: #b8cccc;
+  
+  /* CELO Theme */
+  --celo-bg: #000000;
+  --celo-fg: #ffffff;
+  --celo-accent: #fbcc5c;
+  --celo-primary: #fbcc5c;
+  --celo-surface: #1a1a1a;
+  --celo-text-primary: #ffffff;
+  --celo-text-secondary: #cccccc;
+  
+  /* SOLANA Theme */
+  --solana-bg: #1a0d2e;
+  --solana-fg: #ffffff;
+  --solana-accent: #9945ff;
+  --solana-primary: #14f195;
+  --solana-surface: #2a1a3e;
+  --solana-text-primary: #ffffff;
+  --solana-text-secondary: #b8a9d9;
+  
+  /* BASE Theme */
+  --base-bg: #0f1419;
+  --base-fg: #ffffff;
+  --base-accent: #0052ff;
+  --base-primary: #0052ff;
+  --base-surface: #1a1f2e;
+  --base-text-primary: #ffffff;
+  --base-text-secondary: #8892b0;
+  
+  /* COINBASE Theme */
+  --coinbase-bg: #0a0e27;
+  --coinbase-fg: #ffffff;
+  --coinbase-accent: #0052ff;
+  --coinbase-primary: #0052ff;
+  --coinbase-surface: #1a1f3a;
+  --coinbase-text-primary: #ffffff;
+  --coinbase-text-secondary: #8892b0;
+}
+
+[data-theme="celo"] {
+  --color-bg: var(--celo-bg);
+  --color-fg: var(--celo-fg);
+  --color-accent: var(--celo-accent);
+  --color-primary: var(--celo-primary);
+  --color-surface: var(--celo-surface);
+  --color-text-primary: var(--celo-text-primary);
+  --color-text-secondary: var(--celo-text-secondary);
+}
+
+[data-theme="solana"] {
+  --color-bg: var(--solana-bg);
+  --color-fg: var(--solana-fg);
+  --color-accent: var(--solana-accent);
+  --color-primary: var(--solana-primary);
+  --color-surface: var(--solana-surface);
+  --color-text-primary: var(--solana-text-primary);
+  --color-text-secondary: var(--solana-text-secondary);
+}
+
+[data-theme="base"] {
+  --color-bg: var(--base-bg);
+  --color-fg: var(--base-fg);
+  --color-accent: var(--base-accent);
+  --color-primary: var(--base-primary);
+  --color-surface: var(--base-surface);
+  --color-text-primary: var(--base-text-primary);
+  --color-text-secondary: var(--base-text-secondary);
+}
+
+[data-theme="coinbase"] {
+  --color-bg: var(--coinbase-bg);
+  --color-fg: var(--coinbase-fg);
+  --color-accent: var(--coinbase-accent);
+  --color-primary: var(--coinbase-primary);
+  --color-surface: var(--coinbase-surface);
+  --color-text-primary: var(--coinbase-text-primary);
+  --color-text-secondary: var(--coinbase-text-secondary);
+}
+
+@layer base {
+  * {
+    @apply border-gray-200;
+  }
+  
+  body {
+    @apply bg-bg text-fg font-sans antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface bg-opacity-80 backdrop-blur-sm border border-white border-opacity-10;
+  }
+  
+  .btn-primary {
+    @apply bg-accent text-white px-6 py-3 rounded-lg font-medium hover:bg-opacity-90 transition-all duration-200 shadow-lg hover:shadow-xl;
+  }
+  
+  .btn-secondary {
+    @apply bg-surface text-fg px-6 py-3 rounded-lg font-medium hover:bg-opacity-80 transition-all duration-200 border border-white border-opacity-10;
+  }
+  
+  .metric-card {
+    @apply glass-card p-6 hover:bg-opacity-15 transition-all duration-200;
+  }
+  
+  .wheel-segment {
+    @apply transition-all duration-300 hover:brightness-110;
+  }
+}
+
+.spin-wheel-animation {
+  animation: spin-wheel 3s cubic-bezier(0.22,1,0.36,1) forwards;
+}
